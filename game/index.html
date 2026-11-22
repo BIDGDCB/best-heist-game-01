@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Velvet Vault — a one-night heist</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="wrap">
+  <header id="hud">
+    <div class="hud-left">
+      <span class="brand">💎 THE VELVET VAULT</span>
+      <span id="night" class="pill">NIGHT 1 / 3</span>
+    </div>
+    <div class="hud-center">
+      <div id="alarm-meter" title="House alarm — at 100% you are caught">
+        <div id="alarm-fill" class="calm" style="width: 0%"></div>
+        <span id="alarm-text">ALARM 0%</span>
+      </div>
+    </div>
+    <div class="hud-right">
+      <span class="pill">LOOT <b id="loot">$0</b></span>
+      <span class="pill">⏱ <b id="timer">2:30</b></span>
+    </div>
+  </header>
+  <div id="objective">Cross the gallery unseen, cut the glass, and be gone before the alarm wakes the house.</div>
+  <div id="stage">
+    <canvas id="game" width="960" height="600"></canvas>
+    <div id="toast" class="hidden"></div>
+    <div id="overlay">
+      <h1 id="overlay-title" class="title">THE VELVET VAULT</h1>
+      <p id="overlay-body"></p>
+      <p id="overlay-hint"></p>
+    </div>
+  </div>
+  <footer id="tools">
+    <span id="tool-counts">🪙 5 &nbsp; 💨 3 &nbsp; ⚡ 1</span>
+    <span class="hint">WASD move · Shift sneak · E cut glass (hold) · Click toss coin · Q smoke · F EMP · P pause · M mute</span>
+  </footer>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
